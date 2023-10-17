@@ -3,4 +3,4 @@ if "%2"=="" if "%1"=="/?" echo.Syntax--   [ScriptName] "String_here" "[Single Ch
 setlocal enabledelayedexpansion
 set str=%1
 set char=%2
-for /l %%i in (0,1,200) do set temp=!str:~%%i,1!&if /i "!temp!"==%char% echo.%%i
+for /l %%i in (0,1,200) do set temp=!str:~%%i,1!&if /i "z!temp!X"==z%char%X echo.%%i
